@@ -21,3 +21,55 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer base {
+  .btn {
+    @apply text-base px-5 py-2 rounded-md font-semibold bg-slate-600/20 text-slate-400 transition-colors;
+
+    &:disabled {
+      @apply cursor-auto opacity-50;
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        @apply bg-slate-600/20;
+
+        &.btn-green {
+          @apply bg-green-600/20;
+        }
+
+        &.btn-blue {
+          @apply bg-blue-700/30;
+        }
+
+        &.btn-red {
+          @apply bg-red-600/20;
+        }
+
+        &.btn-orange {
+          @apply bg-orange-600/20;
+        }
+      }
+    }
+
+    &.btn-green {
+      @apply bg-green-600/20 text-green-600;
+    }
+
+    &.btn-blue {
+      @apply bg-blue-700/20 text-blue-400;
+    }
+
+    &.btn-red {
+      @apply bg-red-600/10 text-red-600;
+    }
+
+    &.btn-orange {
+      @apply bg-orange-600/10 text-orange-600;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
