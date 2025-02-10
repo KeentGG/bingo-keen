@@ -1,9 +1,10 @@
 import "./App.css";
+import BingoWrapper from "./components/BingoWrapper";
 
 function App() {
   return (
     <>
-      <div>Hello World</div>
+      <BingoWrapper />
     </>
   );
 }
